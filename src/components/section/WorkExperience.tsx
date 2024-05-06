@@ -66,7 +66,7 @@ const WorkExperience = () => {
                     {
                         experienceList.map( (exp, index) => {
                             return (
-                                <div className={`pb-8 ${index < (experienceList.length - 1) ? 'border-bottom-gray' : index === (experienceList.length - 1) ? 'pb-0'  : ''}`}>
+                                <div key={`exp_${index}`} className={`pb-8 ${index < (experienceList.length - 1) ? 'border-bottom-gray' : index === (experienceList.length - 1) ? 'pb-0'  : ''}`}>
                                     <div className={`w-full flex items-center justify-between pb-2 ${index === 0 ? 'pt-4' : 'pt-8'}`}>
                                         <Title title={exp.title} size="S" />
                                         <p className="text-sm text-gray-600">{ exp.period }</p>
@@ -76,9 +76,9 @@ const WorkExperience = () => {
 
                                     <div className="pt-8">
                                         {
-                                            exp.describe.map( (desc) => {
+                                            exp.describe.map( (desc, index) => {
                                                 return (
-                                                    <DotWithText sideText={desc} textSize="base"/>
+                                                    <DotWithText key={`exp_desc_${index}`} sideText={desc} textSize="base"/>
                                                 )
                                             })
                                         }
