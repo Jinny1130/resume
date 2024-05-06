@@ -4,6 +4,7 @@ import ContactAndSkill from '@/components/section/ContactAndSkill'
 import Introduce from "@/components/section/Introduce";
 import Career from "@/components/section/Career";
 import WorkExperience from "@/components/section/WorkExperience";
+import SideProject from "@/components/section/SideProject";
 
 export default function Home() {
     return (
@@ -23,6 +24,7 @@ export default function Home() {
                 <Introduce />
                 <Career />
                 <WorkExperience />
+                <SideProject />
             </div>
         </div>
     );

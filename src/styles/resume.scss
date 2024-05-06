@@ -1,8 +1,11 @@
 .resume-wrap {
     >div {
-        padding: 30px 0;
-        &:not(.name-wrap) {
+        padding: 70px 0;
+        &:not(:first-of-type, :last-of-type) {
             border-bottom: 1px solid #edebeb;
+        }
+        &.contact-wrap {
+            padding: 0 0 70px;
         }
     }
 }

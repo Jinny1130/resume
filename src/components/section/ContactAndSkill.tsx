@@ -3,7 +3,7 @@ import Title from '@/components/common/Title';
 
 const ContactAndSkill = () => {
     return (
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between contact-wrap">
             <div className="myself-image w-1/3 h-auto rounded-full mr-20"></div>
 
             <div className="w-2/3">
