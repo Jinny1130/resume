@@ -3,12 +3,13 @@ import Header from '@/components/common/Header';
 import ContactAndSkill from '@/components/section/ContactAndSkill'
 import Introduce from "@/components/section/Introduce";
 import Career from "@/components/section/Career";
+import WorkExperience from "@/components/section/WorkExperience";
 
 export default function Home() {
     return (
         <div>
             <Header />
-            <div className="resume-wrap max-w-4xl pt-24 px-3 mx-auto">
+            <div className="resume-wrap max-w-4xl py-24 px-3 mx-auto">
 
                 <div className="name-wrap flex items-center w-full">
                     <i className="block w-2 h-12 bg-sky-200 mr-1.5"/>
@@ -20,7 +21,8 @@ export default function Home() {
 
                 <ContactAndSkill />
                 <Introduce />
-                <Career/>
+                <Career />
+                <WorkExperience />
             </div>
         </div>
     );
