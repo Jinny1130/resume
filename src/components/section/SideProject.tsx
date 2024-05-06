@@ -18,22 +18,22 @@ const SideProject = () => {
     return (
         <div>
             <Title title="Side Project" size="L" />
-            <div className="px-1 py-3.5 flex">
-                <h3 className="block w-1/5 h-fit font-semibold text-sky-500 text-2xl py-4 sticky top-16">리딩오션</h3>
+            <div className="px-1 py-3.5 flex flex-col sm:flex-row">
+                <h3 className="block w-full h-fit font-semibold text-sky-500 text-2xl bg-white py-4 sticky top-14 sm:top-16 sm:w-1/5">리딩오션</h3>
 
-                <div className="w-4/5">
+                <div className="w-full sm:w-4/5">
                     {
                         sideProjectList.map( (project, index) => {
                             return (
                                 <div className={`pb-8 ${index < (sideProjectList.length - 1) ? 'border-bottom-gray' : index === (sideProjectList.length - 1) ? 'pb-0'  : ''}`}>
                                     <div className={`w-full flex items-center justify-between pb-2 ${index === 0 ? 'pt-4' : 'pt-8'}`}>
                                         <Title title={project.title} size="S" />
-                                        <p className="text-sm text-gray-600">{ project.period }</p>
+                                        <p className="text-xs sm:text-sm text-gray-600">{ project.period }</p>
                                     </div>
                                     
-                                    <div className={`text-sm text-gray-600 ${project.title === 'The Other' ? 'hidden' : ''}`}><span className="mr-2">👉🏻</span>{ project.pageAbout }</div>
+                                    <div className={`text-xs sm:text-sm text-gray-600 ${project.title === 'The Other' ? 'hidden' : ''}`}><span className="mr-2">👉🏻</span>{ project.pageAbout }</div>
 
-                                    <div className="pt-8">
+                                    <div className="pt-8 side-project-desc-list">
                                         {
                                             project.describe.map( (desc) => {
                                                 return (

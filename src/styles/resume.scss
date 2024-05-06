@@ -11,14 +11,47 @@
 }
 
 .myself-image {
-    max-width: 260px;
-    height: 260px;
-    // background: url(/wj.png) no-repeat center / cover;
-    background: url(/woojin_czech.jpg) no-repeat center / cover;
-    // background: url(/woojin_paris.jpg) no-repeat center / cover;
-    // background: url(/woojin_paris2.jpg) no-repeat center / cover;
+    max-height: 400px;
+    overflow: hidden;
+    
+    img{
+        width:100%;
+        height: auto;
+    }
 }
 
 .border-bottom-gray {
     border-bottom: 1px solid #edebeb;
+}
+
+.experience-desc-list, .side-project-desc-list {
+    >div {
+        font-size: 13px;
+        i {
+            margin-right: 6px;
+        }
+        p {
+            width: calc(100% - 10px);
+        }
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .myself-image {
+        max-width: 220px;
+
+        img{
+            max-width: 220px;
+            height: 220px;
+        }
+    }
+
+    .experience-desc-list, .side-project-desc-list {
+        >div {
+            font-size: 16px;
+            i {
+                margin-right: 8px;
+            }
+        }
+    }
 }

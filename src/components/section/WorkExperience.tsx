@@ -37,9 +37,9 @@ const experienceList = [
         ]
     },
     {
-        title: "출결선생 - 출결 관리 페이지",
+        title: "출결선생 - 출결체크 페이지",
         period: "2023.08 ~ 2023.09",
-        pageAbout: "결제선생 서비스 이용 사업장 중 출결관리 시스템을 사용하는 사업장의 출결 서비스 관리 페이지",
+        pageAbout: "결제선생 서비스 이용 사업장 중 출결관리 시스템을 사용하는 사업장의 학생 출결 체크 페이지",
         describe: [
             "신규서비스의 출결 조회&체크 화면을 개발하였습니다.",
             "리스트 형으로 각 리스트에서 출결 처리, 철회, 완료가 이루어지는 UI/UX를 개발하였습니다."
@@ -59,22 +59,22 @@ const WorkExperience = () => {
     return (
         <div>
             <Title title="Work Experience" size="L"/>
-            <div className="px-1 py-3.5 flex">
-                <h3 className="block w-1/5 h-fit font-semibold text-sky-500 text-2xl py-4 sticky top-16">(주) 페이민트</h3>
+            <div className="px-1 py-3.5 flex flex-col sm:flex-row">
+                <h3 className="block w-full h-fit font-semibold text-sky-500 text-2xl bg-white py-4 sticky top-14 sm:top-16 sm:w-1/5">(주) 페이민트</h3>
 
-                <div className="w-4/5">
+                <div className="w-full sm:w-4/5">
                     {
                         experienceList.map( (exp, index) => {
                             return (
                                 <div key={`exp_${index}`} className={`pb-8 ${index < (experienceList.length - 1) ? 'border-bottom-gray' : index === (experienceList.length - 1) ? 'pb-0'  : ''}`}>
                                     <div className={`w-full flex items-center justify-between pb-2 ${index === 0 ? 'pt-4' : 'pt-8'}`}>
                                         <Title title={exp.title} size="S" />
-                                        <p className="text-sm text-gray-600">{ exp.period }</p>
+                                        <p className="text-xs sm:text-sm text-gray-600">{ exp.period }</p>
                                     </div>
                                     
-                                    <div className={`text-sm text-gray-600 ${exp.title === 'The Other' ? 'hidden' : ''}`}><span className="mr-2">👉🏻</span>{ exp.pageAbout }</div>
+                                    <div className={`text-xs sm:text-sm text-gray-600 ${exp.title === 'The Other' ? 'hidden' : ''}`}><span className="mr-2">👉🏻</span>{ exp.pageAbout }</div>
 
-                                    <div className="pt-8">
+                                    <div className="pt-8 experience-desc-list">
                                         {
                                             exp.describe.map( (desc, index) => {
                                                 return (
