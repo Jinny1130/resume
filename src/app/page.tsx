@@ -1,6 +1,8 @@
 import "@/styles/resume.scss";
 import Header from '@/components/common/Header';
 import ContactAndSkill from '@/components/section/ContactAndSkill'
+import Introduce from "@/components/section/Introduce";
+import Career from "@/components/section/Career";
 
 export default function Home() {
     return (
@@ -17,6 +19,8 @@ export default function Home() {
                 </div>
 
                 <ContactAndSkill />
+                <Introduce />
+                <Career/>
             </div>
         </div>
     );
