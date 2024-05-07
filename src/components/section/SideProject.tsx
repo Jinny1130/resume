@@ -3,6 +3,7 @@ import DotWithText from "@/components/common/DotWithText"
 
 const sideProjectList = [
     {
+        id: "readingOcean",
         title: "독서미션 캐릭터 성장 게임",
         period: "2022.12",
         pageAbout: "리딩오션 내부의 유아의 독서 증진을 위한 동기부여 프로그램으로 육성 시뮬레이션 게임에 기반한 페이지",
@@ -25,7 +26,7 @@ const SideProject = () => {
                     {
                         sideProjectList.map( (project, index) => {
                             return (
-                                <div className={`pb-8 ${index < (sideProjectList.length - 1) ? 'border-bottom-gray' : index === (sideProjectList.length - 1) ? 'pb-0'  : ''}`}>
+                                <div key={project.id} className={`pb-8 ${index < (sideProjectList.length - 1) ? 'border-bottom-gray' : index === (sideProjectList.length - 1) ? 'pb-0'  : ''}`}>
                                     <div className={`w-full flex items-center justify-between pb-2 ${index === 0 ? 'pt-4' : 'pt-8'}`}>
                                         <Title title={project.title} size="S" />
                                         <p className="text-xs sm:text-sm text-gray-600">{ project.period }</p>
@@ -35,9 +36,9 @@ const SideProject = () => {
 
                                     <div className="pt-8 side-project-desc-list">
                                         {
-                                            project.describe.map( (desc) => {
+                                            project.describe.map( (desc, index) => {
                                                 return (
-                                                    <DotWithText sideText={desc} textSize="base"/>
+                                                    <DotWithText key={`${project.id}_desc_${index}`} sideText={desc} textSize="base"/>
                                                 )
                                             })
                                         }
