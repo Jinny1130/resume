@@ -15,7 +15,7 @@ export default function Home() {
     const [isMobile, setIsMobile] = useState('pc');
 
     useEffect( () => {
-        
+
         function setHeaderShadow() {
             if (window.scrollY === 0) {
                 document.querySelector('#header')?.classList.remove('shadow')
@@ -50,8 +50,8 @@ export default function Home() {
             <div className="resume-wrap max-w-4xl pt-24 px-6 mx-auto sm:px-3">
                 <NameWrap />
                 <ContactAndSkill />
-                <Introduce />
-                <Career />
+                <Introduce isMobile={isMobile} />
+                <Career isMobile={isMobile} />
                 <WorkExperience />
                 <SideProject />
             </div>

@@ -3,6 +3,7 @@ import DotWithText from "@/components/common/DotWithText"
 
 const experienceList = [
     {
+        id: 'admin',
         title: "Admin 2.0",
         period: "2021.08 ~ ",
         pageAbout: "사용자들과 사업장의 정보 등을 관리하는 백오피스 페이지",
@@ -14,6 +15,7 @@ const experienceList = [
         ]
     },
     {
+        id: 'payssam',
         title: "결제선생 - 매니저사이트",
         period: "2021.08 ~ ",
         pageAbout: "결제선생 서비스에 가입한 사용자가 사업장을 등록, 서비스 이용, 사업장의 고객 관리를 위해 사용하는 페이지",
@@ -27,6 +29,7 @@ const experienceList = [
         ]
     },
     {
+        id: 'bill',
         title: "결제선생 - 청구서",
         period: "2021.08 ~ ",
         pageAbout: "결제선생 서비스를 이용하는 사업장에서 사업장의 고객에게 발송하는 결제 청구서 페이지 ",
@@ -37,6 +40,7 @@ const experienceList = [
         ]
     },
     {
+        id: 'hissam',
         title: "출결선생 - 출결체크 페이지",
         period: "2023.08 ~ 2023.09",
         pageAbout: "결제선생 서비스 이용 사업장 중 출결관리 시스템을 사용하는 사업장의 학생 출결 체크 페이지",
@@ -46,6 +50,7 @@ const experienceList = [
         ]
     },
     {
+        id: 'other',
         title: "The Other",
         period: "-",
         describe: [
@@ -66,7 +71,7 @@ const WorkExperience = () => {
                     {
                         experienceList.map( (exp, index) => {
                             return (
-                                <div key={`exp_${index}`} className={`pb-8 ${index < (experienceList.length - 1) ? 'border-bottom-gray' : index === (experienceList.length - 1) ? 'pb-0'  : ''}`}>
+                                <div key={exp.id} className={`pb-8 ${index < (experienceList.length - 1) ? 'border-bottom-gray' : index === (experienceList.length - 1) ? 'pb-0'  : ''}`}>
                                     <div className={`w-full flex items-center justify-between pb-2 ${index === 0 ? 'pt-4' : 'pt-8'}`}>
                                         <Title title={exp.title} size="S" />
                                         <p className="text-xs sm:text-sm text-gray-600">{ exp.period }</p>
@@ -78,7 +83,7 @@ const WorkExperience = () => {
                                         {
                                             exp.describe.map( (desc, index) => {
                                                 return (
-                                                    <DotWithText key={`exp_desc_${index}`} sideText={desc} textSize="base"/>
+                                                    <DotWithText key={`${exp.id}_desc_${index}`} sideText={desc} textSize="base"/>
                                                 )
                                             })
                                         }
