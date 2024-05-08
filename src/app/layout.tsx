@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Nanum_Gothic } from "next/font/google";
 import "@/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const notoSansKR = Nanum_Gothic({ weight: ['400', '700', '800'], subsets: ['latin'] });
 
 export const metadata: Metadata = {
 	title: "최우진 | Front-end | Resume",
@@ -15,7 +15,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body className={notoSansKR.className}>
+				{children}
+			</body>
 		</html>
 	);
 }
