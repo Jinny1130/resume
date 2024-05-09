@@ -45,10 +45,10 @@ const ContactAndSkill = () => {
                             <p className="flex items-baseline">
                                 <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>Html, CSS, SCSS
                             </p>
-                            <p className="flex items-baseline text-gray-400">
+                            <p className="flex items-baseline">
                                 <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>React, Next.js
                             </p>
-                            <p className="flex items-baseline text-gray-400">
+                            <p className="flex items-baseline">
                                 <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>Typescript
                             </p>
                         </div>
@@ -61,7 +61,7 @@ const ContactAndSkill = () => {
                                 <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>Git, Github, GitLab
                             </p>
                             <p className="flex items-baseline">
-                                <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>VSCode, <span className="text-gray-400">WebStorm</span>
+                                <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>VSCode, WebStorm
                             </p>
                             <p className="flex items-baseline">
                                 <i className="block w-1 h-1 rounded-full bg-sky-400 mr-1"/>Figma, Slack, Monday
