@@ -11,7 +11,7 @@ import SideProject from "@/components/section/SideProject";
 import Footer from '@/components/common/Footer';
 import { useEffect, useState } from "react"
 
-export default function Home() {
+export default function Home({params}: {params: pageParams} ) {
     const [isMobile, setIsMobile] = useState('pc');
 
     useEffect( () => {

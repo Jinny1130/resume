@@ -1,4 +1,4 @@
-import Title from "../common/Title"
+import Title from "@/components/common/Title"
 
 const Career = ({ isMobile }:Readonly<{isMobile: string}>) => {
     return (
